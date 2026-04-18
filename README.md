@@ -58,7 +58,6 @@ This platform helps:
 
 ### 💼 Internship & Opportunities Section
 <img src="assets/images/internship-section.png" width="100%"/>
-
 ---
 
 ## ⚙️ Installation & Setup
