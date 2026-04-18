@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Connect | St Joseph's College</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="system.css">
+    
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="js/supabaseClient.js" defer></script>
+    <script src="js/alumni.js" defer></script>
+    
+    <style>
+        .filters-section {
+            background-color: var(--inst-nav-bg);
+            padding: 1.5rem;
+            border: 1px solid var(--inst-border-light);
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .filter-input {
+            padding: 0.75rem;
+            border: 1px solid var(--inst-border-dark);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            flex: 1;
+            min-width: 150px;
+        }
+        .alumni-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .editorial-card {
+            border: 1px solid var(--inst-border-light);
+            background-color: var(--inst-nav-bg);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            height: 100%;
+        }
+        .editorial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .editorial-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--inst-border-light);
+        }
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-content h3 {
+            font-size: 1.35rem;
+            color: var(--inst-text-main);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .card-content p {
+            color: var(--inst-text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .card-actions {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            display: flex;
+            gap: 0.75rem;
+        }
+        .loading-state, .empty-state {
+            text-align: center;
+            padding: 4rem;
+            color: var(--inst-text-muted);
+            font-size: 1.15rem;
+            background: var(--inst-nav-bg);
+            border: 1px solid var(--inst-border-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Institutional Navbar -->
+    <header class="inst-header">
+        <div class="inst-container header-inner">
+            <div class="header-logo">
+                <a href="alumni/alumni/index.html">St Joseph's College of Engineering</a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="alumni/alumni/index.html">Home</a></li>
+                    <li><a href="Internship/Internship/internship.html">Internships</a></li>
+                    <li><a href="connect/alumini/events.html">Events</a></li>
+                    <li><a href="1.html">Become a Mentor</a></li>
+                    <li><a href="alumni-connect.html" style="color: var(--inst-maroon); border-bottom: 2px solid var(--inst-maroon);">Alumni Connect</a></li>
+                    <li><a href="batch-reunion.html">Batch Reunion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="inst-layout-wrapper">
+        <div class="inst-container">
+            <h1 class="section-title">Alumni Connect</h1>
+            <p class="section-prose">Connect with fellow alumni, find mentors, and expand your professional network based on your shared background.</p>
+
+            <!-- Search and Filter Section -->
+            <div class="filters-section">
+                <input type="text" id="search-name" class="filter-input" placeholder="Search by name...">
+                
+                <select id="filter-department" class="filter-input">
+                    <option value="">All Departments</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Electronics and Communication">Electronics and Communication</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                </select>
+                
+                <select id="filter-company" class="filter-input">
+                    <option value="">All Companies</option>
+                    <option value="Google">Google</option>
+                    <option value="Microsoft">Microsoft</option>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Meta">Meta</option>
+                    <option value="TCS">TCS</option>
+                    <option value="Infosys">Infosys</option>
+                    <option value="Cognizant">Cognizant</option>
+                    <option value="Wipro">Wipro</option>
+                </select>
+                
+                <select id="filter-year" class="filter-input">
+                    <option value="">All Graduation Years</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+                
+                <button id="apply-filters" class="inst-btn inst-btn-primary" style="background-color: var(--inst-maroon); color: white;">Filter Results</button>
+            </div>
+
+            <!-- Content Containers -->
+            <div id="loading-container" class="loading-state">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite; margin-bottom: 1rem;"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+                <br>Loading alumni connections...
+            </div>
+            
+            <div id="error-container" class="empty-state" style="display: none;">
+            </div>
+
+            <div id="alumni-container" class="alumni-grid" style="display: none;">
+                <!-- Alumni cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+    <!-- Minimal Footer -->
+    <footer class="inst-footer mt-large">
+        <div class="inst-container footer-inner">
+            <div class="footer-primary">
+                <h3>St Joseph’s College of Engineering</h3>
+                <p>Advancing scholarship, leadership, and professional excellence through a united community.</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2026 St Joseph’s College of Engineering Alumni Network. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

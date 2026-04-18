@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni Contribution | Give Back</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="system.css">
+  <style>
+    /* Specific fix for floating card cutoff on this page */
+    .hero-section {
+      height: auto !important;
+      min-height: 100vh;
+      padding-bottom: 120px !important;
+    }
+    .hero-glass-element.idle-float {
+      animation: heroFloatCenter 5s ease-in-out infinite !important;
+    }
+    @keyframes heroFloatCenter {
+      0% { transform: translate(-50%, -50%) translateY(0); }
+      50% { transform: translate(-50%, -50%) translateY(-15px); }
+      100% { transform: translate(-50%, -50%) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="container">
+      <a href="#" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.0001C16.9706 21.0001 21 16.9707 21 12.0001C21 7.0295 16.9706 3.00006 12 3.00006C7.02944 3.00006 3 7.0295 3 12.0001C3 16.9707 7.02944 21.0001 12 21.0001ZM12 17.5001C15.0376 17.5001 17.5 15.0376 17.5 12.0001C17.5 8.96249 15.0376 6.50006 12 6.50006C8.96244 6.50006 6.5 8.96249 6.5 12.0001C6.5 15.0376 8.96244 17.5001 12 17.5001Z" fill="var(--red)"/>
+          <path d="M12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5C10.6193 9.5 9.5 10.6193 9.5 12C9.5 13.3807 10.6193 14.5 12 14.5Z" fill="white"/>
+        </svg>
+        Alumni<span>Portal</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="alumni.html" class="active">Donation</a></li>
+        <li><a href="internship.html">Internship</a></li>
+        <li><a href="#">Mentorship</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="section hero-section">
+    <div class="hero-bg-container" id="hero-slider">
+      <!-- Backgrounds are set via JS -->
+      <div class="hero-bg active" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="container hero-content" data-parallax="true">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="load-hidden">Empower the<br>Next Generation</h1>
+        <p id="hero-subtitle" class="load-hidden">Your contribution creates scholarships, enhances facilities, and funds breakthroughs that shape the future. Be the catalyst for greatness.</p>
+        <div class="hero-actions load-hidden" id="hero-buttons">
+          <a href="#donate-form" class="btn btn-red">Give Now</a>
+          <a href="#how-it-works" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual load-hidden" id="hero-visual">
+        <div class="hero-glass-element idle-float">
+          <span class="hero-badge">Latest Impact</span>
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Students in class">
+          <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Innovation Lab Funded</h3>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Thank you to the Class of '98 for making exactly this possible.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="container grid grid-2 reveal" style="align-items: center;">
+      <div class="about-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Graduation" class="about-image idle-float-delayed">
+        <div class="glass-card about-stats">
+          <h2 style="color: var(--red); font-size: 2.5rem; margin-bottom: 0;">$15M+</h2>
+          <p style="margin:0; font-size:1rem; font-weight: 500;">Raised this year</p>
+        </div>
+      </div>
+      
+      <div class="about-text">
+        <span class="hero-badge" style="margin-bottom: 16px;">Our Mission</span>
+        <h2 style="margin-bottom: 24px;">Creating a Legacy of Excellence.</h2>
+        <p style="margin-bottom: 32px;">Every single donation connects our proud past to a limitless future. Through your support, we ensure that talented minds receive the world-class education they deserve, regardless of their financial background.</p>
+        
+        <div class="grid grid-2" style="gap: 16px;">
+          <div class="glass-card" style="padding: 24px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-bottom:16px;">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="var(--red)" stroke-width="2"/>
+              <path d="M8 12L11 15L16 9" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h4 style="margin-bottom: 8px;">Tax Deductible</h4>
+            <p style="font-size: 0.9rem;">100% of contributions are secure and tax deductible.</p>
+          </div>
+          <div class="glass-card" style="padding: 24px;">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-bottom:16px;">
+              <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="var(--red)" stroke-width="2"/>
+              <path d="M12 16V22M8 22H16M3 9H21" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h4 style="margin-bottom: 8px;">Transparent</h4>
+            <p style="font-size: 0.9rem;">Track how your specific funds are allocated annually.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section" style="background: rgba(255,255,255,0.02);">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 64px;">
+        <span class="hero-badge" style="margin: 0 auto 16px;">Impact areas</span>
+        <h2>Where Your Gift Goes</h2>
+        <p style="max-width: 600px; margin: 16px auto 0;">Choose exactly where you want to make a difference based on your passion.</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="glass-card reveal stagger-1">
+          <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(229,57,53,0.1); display: flex; align-items:center; justify-content:center; margin-bottom:24px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M12 14L22 4M12 14L2 4M12 14v10"/></svg>
+          </div>
+          <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Scholarship Fund</h3>
+          <p style="margin-bottom: 24px; font-size: 0.95rem;">Empower bright students facing financial hardship with full or partial tuition coverage.</p>
+          <a href="#" style="color: var(--red); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <div class="glass-card reveal stagger-2">
+          <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(229,57,53,0.1); display: flex; align-items:center; justify-content:center; margin-bottom:24px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Infrastructure</h3>
+          <p style="margin-bottom: 24px; font-size: 0.95rem;">Help build state-of-the-art laboratories, modern libraries, and smart classrooms.</p>
+           <a href="#" style="color: var(--red); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <div class="glass-card reveal stagger-3">
+          <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(229,57,53,0.1); display: flex; align-items:center; justify-content:center; margin-bottom:24px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/></svg>
+          </div>
+          <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Research Grants</h3>
+          <p style="margin-bottom: 24px; font-size: 0.95rem;">Fund breakthrough research projects that solve real-world problems and push boundaries.</p>
+           <a href="#" style="color: var(--red); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works (Timeline) -->
+  <section id="how-it-works" class="section">
+    <div class="container reveal">
+      <div style="text-align: center; margin-bottom: 64px;">
+        <h2>The Journey of Your Gift</h2>
+      </div>
+      
+      <div class="timeline" id="timeline">
+        <div class="timeline-progress" id="timeline-progress"></div>
+        
+        <div class="timeline-item reveal">
+          <div class="timeline-number">1</div>
+          <div class="glass-card">
+            <h3 style="margin-bottom: 8px;">Choose Your Cause</h3>
+            <p>Select whether you want to direct your donation generally, or target a specific faculty, scholarship, or project.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item reveal">
+          <div class="timeline-number">2</div>
+          <div class="glass-card">
+            <h3 style="margin-bottom: 8px;">Secure Donation</h3>
+            <p>Complete your completely secure, tax-deductible contribution via our encrypted platform.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item reveal">
+          <div class="timeline-number">3</div>
+          <div class="glass-card">
+            <h3 style="margin-bottom: 8px;">Impact Report</h3>
+            <p>Every quarter, receive a detailed transparent report on exactly how and where your funds made a difference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section id="donate-form" class="section form-section">
+    <div class="container form-layout reveal">
+      <div class="form-info">
+        <span class="hero-badge" style="margin-bottom: 16px;">Make an Impact</span>
+        <h2>Support the Next Generation.</h2>
+        <p>By giving back to your alma mater, you ensure our shared legacy of excellence continues. Every contribution matters.</p>
+        <ul style="list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 16px;">
+          <li style="display: flex; align-items: center; gap: 12px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Bank-grade 256-bit encryption</span>
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px;">
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Cancel recurring gifts anytime</span>
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px;">
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>100% Tax Deductible receipt instantly</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="glass-form relative overflow-hidden" style="position: relative;">
+        <form id="donation-form">
+          <div style="display: flex; gap: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--glass-border); padding-bottom: 16px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="radio" name="frequency" value="one-time" checked style="accent-color: var(--red);">
+              <span style="font-weight: 500;">One Time</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="radio" name="frequency" value="monthly" style="accent-color: var(--red);">
+              <span style="font-weight: 500;">Monthly</span>
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Select Amount</label>
+            <div class="amount-grid" id="amount-selector">
+              <div class="amount-btn selected" data-value="100">$100</div>
+              <div class="amount-btn" data-value="250">$250</div>
+              <div class="amount-btn" data-value="500">$500</div>
+              <div class="amount-btn" data-value="1000">$1,000</div>
+              <div class="amount-btn" data-value="5000">$5,000</div>
+              <div class="amount-btn" data-value="custom">Custom</div>
+            </div>
+            <input type="number" id="custom-amount" class="form-control" placeholder="Enter amount..." style="display: none; margin-top: 12px;" min="10">
+          </div>
+          
+          <div class="grid grid-2" style="gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name</label>
+              <input type="text" id="firstName" class="form-control" required placeholder="John">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name</label>
+              <input type="text" id="lastName" class="form-control" required placeholder="Doe">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" required placeholder="john@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="fundId">Designation Fund</label>
+            <select id="fundId" class="form-control" required style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;">
+              <option value="general" style="color:#0a0a0a">Area of Greatest Need</option>
+              <option value="scholarship" style="color:#0a0a0a">General Scholarship Fund</option>
+              <option value="athletics" style="color:#0a0a0a">Athletics Program</option>
+              <option value="engineering" style="color:#0a0a0a">College of Engineering</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-red" style="width: 100%; margin-top: 16px; padding: 18px; font-size: 1.1rem;">
+            Proceed to Payment
+          </button>
+        </form>
+        
+        <!-- Success State -->
+        <div id="donation-success" class="form-success" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 24px; z-index: 10;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(76, 175, 80, 0.2); display: flex; align-items:center; justify-content:center; margin-bottom: 24px;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3 style="margin-bottom: 16px; font-size: 1.8rem;">Thank You!</h3>
+          <p style="margin-bottom: 32px; color: var(--text-muted);">Your information has been securely recorded. You will receive an email shortly.</p>
+          <button id="reset-form" class="btn btn-outline">Make another gift</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-section reveal">
+    <div class="container">
+      <h2>Transform a Life Today</h2>
+      <p style="font-size: 1.25rem;">Join thousands of alumni who are building the future.</p>
+      <a href="#donate-form" class="btn btn-outline" style="padding: 16px 40px; font-size: 1.1rem;">Contribute Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="padding-right: 40px;">
+           <a href="#" class="logo" style="font-size: 1.5rem; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 24px; text-decoration: none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.0001C16.9706 21.0001 21 16.9707 21 12.0001C21 7.0295 16.9706 3.00006 12 3.00006C7.02944 3.00006 3 7.0295 3 12.0001C3 16.9707 7.02944 21.0001 12 21.0001ZM12 17.5001C15.0376 17.5001 17.5 15.0376 17.5 12.0001C17.5 8.96249 15.0376 6.50006 12 6.50006C8.96244 6.50006 6.5 8.96249 6.5 12.0001C6.5 15.0376 8.96244 17.5001 12 17.5001Z" fill="var(--red)"/>
+            </svg>
+            Alumni<span style="color: var(--red);">Portal</span>
+          </a>
+          <p style="font-size: 0.95rem; line-height: 1.8;">The Alumni Contribution platform is dedicated to connecting giving graduates with the next generation of students facing financial barriers to excellence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Giving</a></li>
+            <li><a href="#">Mentorship</a></li>
+            <li><a href="#">Internships</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Annual Reports</a></li>
+            <li><a href="#">Tax Information</a></li>
+            <li><a href="#">Matching Gifts</a></li>
+            <li><a href="#">Endowments</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="mailto:giving@university.edu" style="color: white;">giving@university.edu</a></li>
+            <li><a href="#">+1 (555) 123-4567</a></li>
+            <li style="color: var(--text-muted); margin-top: 16px; font-size: 0.9rem;">123 University Ave<br>Innovation District</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Alumni Portal Integration. All Rights Reserved. Privacy Policy | Terms of Service.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

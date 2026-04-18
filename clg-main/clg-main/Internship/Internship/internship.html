@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni Portal | Internship Offering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="system.css">
+  <style>
+    /* Specific fix for floating card cutoff on this page */
+    .hero-section {
+      height: auto !important;
+      min-height: 92vh;
+      padding-bottom: 120px !important;
+    }
+    .hero-glass-element.idle-float {
+      animation: heroFloatCenter 5s ease-in-out infinite !important;
+    }
+    @keyframes heroFloatCenter {
+      0% { transform: translate(-50%, -50%) translateY(0); }
+      50% { transform: translate(-50%, -50%) translateY(-15px); }
+      100% { transform: translate(-50%, -50%) translateY(0); }
+    }
+
+    .carousel-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      filter: saturate(0.85);
+    }
+
+    .carousel-image.active {
+      opacity: 1;
+    }
+
+    .carousel-container {
+      position: relative;
+      height: 200px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Institutional Navbar -->
+  <header class="inst-header" style="background-color: #ffffff; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; z-index: 1000;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 80px;">
+      <div>
+        <a href="../../alumni/alumni/index.html" style="font-family: 'Merriweather', serif; font-size: 1.5rem; font-weight: 700; color: #6a0121; letter-spacing: -0.5px; text-decoration: none;">St Joseph's College of Engineering</a>
+      </div>
+      <nav>
+        <ul style="display: flex; gap: 2.5rem; list-style: none;">
+          <li><a href="../../alumni/alumni/index.html" style="font-size: 0.95rem; font-weight: 500; color: #222; padding-bottom: 4px; text-decoration: none;">Home</a></li>
+          <li><a href="internship.html" style="font-size: 0.95rem; font-weight: 600; color: #6a0121; border-bottom: 2px solid #6a0121; padding-bottom: 4px; text-decoration: none;">Internships</a></li>
+          <li><a href="../../connect/alumini/events.html" style="font-size: 0.95rem; font-weight: 500; color: #222; padding-bottom: 4px; text-decoration: none;">Events</a></li>
+          <li><a href="../../1.html" style="font-size: 0.95rem; font-weight: 500; color: #222; padding-bottom: 4px; text-decoration: none;">Become a Mentor</a></li>
+          <li><a href="../../alumni-connect.html" style="font-size: 0.95rem; font-weight: 500; color: #222; padding-bottom: 4px; text-decoration: none;">Alumni Connect</a></li>
+          <li><a href="../../batch-reunion.html" style="font-size: 0.95rem; font-weight: 500; color: #222; padding-bottom: 4px; text-decoration: none;">Batch Reunion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="section hero-section">
+    <div class="hero-bg-container">
+      <!-- Dark corporate office background -->
+      <div class="hero-bg active"
+        style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); animation: heroZoom 15s infinite alternate var(--ease-smooth);">
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content" data-parallax="true">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="load-hidden" style="font-size: clamp(2.5rem, 4vw, 4.5rem);">Help Students Gain
+          Industry Experience</h1>
+        <p id="hero-subtitle" class="load-hidden">Your internship offerings bridge the gap between academic theory and
+          real-world application. Find the next generation of outstanding talent from your alma mater.</p>
+        <div class="hero-actions load-hidden" id="hero-buttons">
+          <a href="#post-internship" class="btn btn-red">Post Internship</a>
+          <a href="#open-listings" class="btn btn-outline">View Listings</a>
+        </div>
+      </div>
+
+      <div class="hero-visual load-hidden" id="hero-visual">
+        <div class="hero-glass-element idle-float">
+          <span class="hero-badge">Featured Role</span>
+          <div class="carousel-container" id="hero-carousel">
+            <img class="carousel-image active"
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Team collaborating">
+            <img class="carousel-image"
+              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Meeting">
+            <img class="carousel-image"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Working">
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Software Eng Intern</h3>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 12px;">TechFlow Solutions • Remote
+          </p>
+          <div style="display: flex; gap: 8px;">
+            <span class="job-skill-pill">React</span>
+            <span class="job-skill-pill">Node.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Internships -->
+  <section class="section">
+    <div class="container grid grid-2 reveal" style="align-items: center;">
+      <div class="about-image-wrapper">
+        <img
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+          alt="Students in professional environment" class="about-image idle-float-delayed">
+      </div>
+
+      <div class="about-text">
+        <span class="hero-badge" style="margin-bottom: 16px;">The Value of Internships</span>
+        <h2 style="margin-bottom: 24px;">Transform Potential into Professional Impact.</h2>
+        <p style="margin-bottom: 32px;">By providing a student with an internship, you're opening doors that can define
+          their career. You'll gain fresh perspectives and eager contributors while giving back directly to the student
+          community.</p>
+
+        <div class="grid" style="gap: 16px;">
+          <div class="glass-card" style="padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
+            <div
+              style="min-width: 48px; height: 48px; border-radius: 12px; background: rgba(229,57,53,0.1); display: flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+                <path d="M12 20v-6M6 20V10M18 20V4" />
+              </svg>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Skill-Building Benefits</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 0;">Provide critical hands-on experience in modern stacks.</p>
+            </div>
+          </div>
+          <div class="glass-card" style="padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
+            <div
+              style="min-width: 48px; height: 48px; border-radius: 12px; background: rgba(229,57,53,0.1); display: flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Alumni Impact</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 0;">Strengthen the network between graduates and students.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section" style="background: rgba(255,255,255,0.02);">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 64px;">
+        <span class="hero-badge" style="margin: 0 auto 16px;">Why Host Interns</span>
+        <h2>Benefits for You and Your Company</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="glass-card reveal stagger-1">
+          <div
+            style="width: 50px; height: 50px; border-radius: 12px; background: rgba(229,57,53,0.1); display: flex; align-items:center; justify-content:center; margin-bottom:24px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Access to Talent</h3>
+          <p style="margin-bottom: 0; font-size: 0.95rem;">Evaluate and mentor high-potential students early, creating a
+            strong pipeline for future full-time hires at your organization.</p>
+        </div>
+
+        <div class="glass-card reveal stagger-2">
+          <div
+            style="width: 50px; height: 50px; border-radius: 12px; background: rgba(229,57,53,0.1); display: flex; align-items:center; justify-content:center; margin-bottom:24px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Give Back</h3>
+          <p style="margin-bottom: 0; font-size: 0.95rem;">Pay it forward to the community that shaped you by reducing
+            the barrier to entry for talented students entering the industry.</p>
+        </div>
+
+        <div class="glass-card reveal stagger-3">
+          <div
+            style="width: 50px; height: 50px; border-radius: 12px; background: rgba(229,57,53,0.1); display: flex; align-items:center; justify-content:center; margin-bottom:24px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 16v-4" />
+              <path d="M12 8h.01" />
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Build Your Network</h3>
+          <p style="margin-bottom: 0; font-size: 0.95rem;">Expand your professional influence around the university
+            ecosystem while building employer branding directly on campus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works (Timeline) -->
+  <section class="section">
+    <div class="container reveal">
+      <div style="text-align: center; margin-bottom: 64px;">
+        <h2>The Hiring Process</h2>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <div class="timeline-progress" id="timeline-progress"></div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-number">1</div>
+          <div class="glass-card">
+            <h3 style="margin-bottom: 8px;">Submit Internship Details</h3>
+            <p>Fill out the role expectations, requirements, and stipend information to ensure the best fit candidates
+              apply.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-number">2</div>
+          <div class="glass-card">
+            <h3 style="margin-bottom: 8px;">Review & Publish</h3>
+            <p>Our career services team quickly verifies the listing and immediately pushes it to the student portal.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-number">3</div>
+          <div class="glass-card">
+            <h3 style="margin-bottom: 8px;">Students Apply</h3>
+            <p>Receive carefully vetted applications directly inside your employer dashboard or forwarded to your inbox.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-number">4</div>
+          <div class="glass-card">
+            <h3 style="margin-bottom: 8px;">Select Candidates</h3>
+            <p>Conduct interviews using your preferred process and easily extend offers to those who match your team
+              culture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section id="post-internship" class="section form-section">
+    <div class="container form-layout reveal">
+      <div class="form-info">
+        <span class="hero-badge" style="margin-bottom: 16px;">Create a Listing</span>
+        <h2>Offer an Internship</h2>
+        <p>Your opportunity takes only a few minutes to create but can launch a career. You have full control over the
+          hiring timeline and process.</p>
+        <div class="glass-card" style="margin-top: 32px; padding: 24px;">
+          <h4 style="margin-bottom: 8px; font-size: 1.1rem;">Best Practices</h4>
+          <ul style="color: var(--text-muted); font-size: 0.95rem; margin-left: 20px; line-height: 1.6;">
+            <li>Be specific about the technology/skills needed</li>
+            <li>Clearly state if the role is Remote or Hybrid</li>
+            <li>Include details on the mentorship they will receive</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glass-form" style="position: relative; overflow: hidden;">
+        <form id="internship-form">
+          <h3 style="margin-bottom: 24px; border-bottom: 1px solid var(--glass-border); padding-bottom: 16px;">Role
+            Details</h3>
+
+          <div class="grid grid-2" style="gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="companyName">Company Name</label>
+              <input type="text" id="companyName" class="form-control" required placeholder="e.g. Acme Corp">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="yourRole">Your Role</label>
+              <input type="text" id="yourRole" class="form-control" required placeholder="e.g. Senior Manager">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="internshipTitle">Internship Title</label>
+            <input type="text" id="internshipTitle" class="form-control" required placeholder="e.g. UX Designer Intern">
+          </div>
+
+          <div class="grid grid-2" style="gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="location">Location Type</label>
+              <select id="location" class="form-control" required
+                style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;">
+                <option value="" disabled selected style="color:#0a0a0a">Select option</option>
+                <option value="Remote" style="color:#0a0a0a">Remote</option>
+                <option value="Onsite" style="color:#0a0a0a">Onsite</option>
+                <option value="Hybrid" style="color:#0a0a0a">Hybrid</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="duration">Duration</label>
+              <input type="text" id="duration" class="form-control" required placeholder="e.g. 12 Weeks">
+            </div>
+          </div>
+
+          <div class="grid grid-2" style="gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="stipend">Target Stipend / Rate</label>
+              <input type="text" id="stipend" class="form-control" required placeholder="e.g. $25/hr or $3,000/mo">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="openings">No. of Openings</label>
+              <input type="number" id="openings" class="form-control" required min="1" placeholder="e.g. 2">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="jobSkills">Required Skills (Press Enter to add)</label>
+            <div class="tag-input-container" id="tag-container">
+              <div id="tags-list" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <!-- Tags added dynamically here -->
+              </div>
+              <input type="text" id="jobSkills" class="tag-input-field" placeholder="Type a skill...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="description">Role Description</label>
+            <textarea id="description" class="form-control" required rows="4"
+              placeholder="Describe the day-to-day responsibilities, what they'll learn, and any project specifics..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="deadline">Application Deadline</label>
+            <input type="date" id="deadline" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-red"
+            style="width: 100%; margin-top: 16px; padding: 18px; font-size: 1.1rem;">
+            Post Internship
+          </button>
+        </form>
+
+        <!-- Success State -->
+        <div id="form-success-state" class="form-success"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 24px; z-index: 10;">
+          <div
+            style="width: 80px; height: 80px; border-radius: 50%; background: rgba(76, 175, 80, 0.2); display: flex; align-items:center; justify-content:center; margin-bottom: 24px;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 16px; font-size: 1.8rem;">Submitted for Review</h3>
+          <p style="margin-bottom: 32px; color: var(--text-muted);">Thank you for empowering our students. Your
+            internship listing is under quick review and will be posted shortly.</p>
+          <button id="reset-internship-form" class="btn btn-outline">Post Another Role</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+  <div class="container">
+
+    <h2>Explore Internships</h2>
+
+    <div class="glass-form" style="margin-bottom:20px;">
+      <div class="form-group">
+        <label class="form-label">Desired Role</label>
+        <input type="text" id="filter-role" class="form-control" placeholder="e.g. Software Engineer">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Skills</label>
+        <input type="text" id="filter-skills" class="form-control" placeholder="e.g. React, Python">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Location</label>
+        <input type="text" id="filter-location" class="form-control" placeholder="e.g. Remote, New York">
+      </div>
+
+      <div class="grid grid-3" style="gap: 16px;">
+        <div class="form-group">
+          <label class="form-label">Skill Level</label>
+          <select id="filter-skill-level" class="form-control" style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;">
+            <option value="" style="color:#0a0a0a">Any Level</option>
+            <option value="beginner" style="color:#0a0a0a">Beginner</option>
+            <option value="intermediate" style="color:#0a0a0a">Intermediate</option>
+            <option value="advanced" style="color:#0a0a0a">Advanced</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Availability (hrs/week)</label>
+          <input type="number" id="filter-availability" class="form-control" placeholder="e.g. 20" min="0">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Learning Goal</label>
+          <select id="filter-goal" class="form-control" style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;">
+            <option value="" style="color:#0a0a0a">Any Goal</option>
+            <option value="hands-on" style="color:#0a0a0a">Hands-on Experience</option>
+            <option value="career" style="color:#0a0a0a">Career Exploration</option>
+            <option value="technical" style="color:#0a0a0a">Technical Depth</option>
+            <option value="leadership" style="color:#0a0a0a">Leadership & Teamwork</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Upload Resume (Optional)</label>
+        <input type="file" id="student-resume" class="form-control" accept=".pdf">
+      </div>
+
+      <button id="filter-btn" class="btn btn-red" style="width:100%; padding:16px; font-size:1.05rem;">Find Matching Internships</button>
+    </div>
+
+    <div id="listings-grid" class="grid grid-3" style="margin-top:20px;"></div>
+
+    <div id="empty-state" class="empty-state" style="display:none;">
+      <p>No internships found</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Current Listings -->
+  <section id="open-listings" class="section">
+    <div class="container reveal">
+      <div
+        style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; border-bottom: 1px solid var(--glass-border); padding-bottom: 24px;">
+        <div>
+          <span class="hero-badge" style="margin-bottom: 12px;">Browse</span>
+          <h2 style="margin-bottom: 0;">Open Internships</h2>
+        </div>
+        <div>
+          <!-- For Testing State Toggle -->
+          <button id="toggle-listings" class="btn btn-outline" style="padding: 10px 16px; font-size:0.9rem;">Toggle
+            Empty State</button>
+        </div>
+      </div>
+
+      <!-- State Containers handled by JS -->
+      <div id="listings-grid" class="grid grid-3">
+        <!-- JS injected cards -->
+      </div>
+
+      <div id="empty-state" class="empty-state" style="display: none;">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"
+          style="margin-bottom:16px;">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <h3 style="margin-bottom: 8px;">No internships posted yet</h3>
+        <p style="color: var(--text-muted); max-width: 400px; margin-bottom: 24px;">Be the first to provide an
+          opportunity for students seeking real-world experience.</p>
+        <a href="#post-internship" class="btn btn-red">Post an Internship</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-section reveal">
+    <div class="container">
+      <h2>Empower the Next Generation</h2>
+      <p style="font-size: 1.25rem;">Transform a student's life by creating meaningful pathways to industry.</p>
+      <a href="#post-internship" class="btn btn-outline"
+        style="padding: 16px 40px; font-size: 1.1rem; border-color: white; color: white;">Post Internship</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="padding-right: 40px;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 12px;">St. Joseph's College of Engineering</h4>
+          <p style="font-size: 0.88rem; line-height: 1.8;">The Alumni internship platform connects graduates with current students, creating pathways to industry experience and career growth.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../alumni/alumni/index.html">Alumni Home</a></li>
+            <li><a href="internship.html">Internships</a></li>
+            <li><a href="../../1.html">Become a Mentor</a></li>
+            <li><a href="../../connect/alumini/events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Candidate Guidelines</a></li>
+            <li><a href="#">Sponsor FAQ</a></li>
+            <li><a href="#">Career Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">careers@stjosephs.edu</a></li>
+            <li><a href="#">+91 44 2450 1060</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 St. Joseph's College of Engineering. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="internship.js"></script>
+</body>
+
+</html>

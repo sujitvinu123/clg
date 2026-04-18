@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Batch Reunion — Reconnect with your classmates at St. Joseph's College of Engineering." />
+  <title>St. Joseph's College of Engineering | Batch Reunion</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="batch-reunion.css" />
+</head>
+
+<body>
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ═══════ NAVBAR ═══════ -->
+  <header class="inst-header" id="mainNav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="alumni/alumni/index.html">St Joseph's College of Engineering</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="alumni/alumni/index.html">Home</a></li>
+          <li><a href="Internship/Internship/internship.html">Internships</a></li>
+          <li><a href="connect/alumini/events.html">Events</a></li>
+          <li><a href="1.html">Become a Mentor</a></li>
+          <li><a href="alumni-connect.html">Alumni Connect</a></li>
+          <li><a href="batch-reunion.html" class="active">Batch Reunion</a></li>
+        </ul>
+      </nav>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════ HERO ═══════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-wrap" id="heroBgWrap">
+      <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1920&q=80" alt="" class="hero-bg-img" />
+    </div>
+    <div class="hero-overlay"></div>
+
+    <!-- Floating particles -->
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <div class="hero-content-wrap">
+      <div class="hero-text">
+        <span class="hero-badge anim-ent" data-d="0">Batch Reunion 2026</span>
+        <h1 class="hero-heading anim-ent" data-d="100">
+          <span class="hero-line">Where Every</span>
+          <span class="hero-line hero-dynamic-line">
+            <span class="hero-static">Memory</span>
+            <span class="hero-morph-wrap">
+              <span class="hero-morph-word active" id="heroMorphWord">Lives On.</span>
+            </span>
+          </span>
+        </h1>
+        <p class="hero-sub anim-ent" data-d="200">Come together with your batchmates to relive the golden days,
+          celebrate achievements, and forge new connections that last a lifetime.</p>
+        <div class="hero-btns anim-ent" data-d="300">
+          <a href="#register" class="btn btn-red btn-ripple btn-lg">Register Now</a>
+          <a href="#countdown" class="btn btn-outline btn-lg">View Event Details</a>
+        </div>
+      </div>
+
+      <!-- Hero Stats Card -->
+      <div class="hero-stats-card anim-ent tilt-card" data-d="400">
+        <div class="hero-card-inner">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number" data-target="2500">0</span>
+              <span class="stat-label">Alumni Registered</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="45">0</span>
+              <span class="stat-label">Batches United</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="12">0</span>
+              <span class="stat-label">Events Planned</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="98">0</span>
+              <span class="stat-label">% Satisfaction</span>
+            </div>
+          </div>
+          <div class="stats-pulse-bar">
+            <div class="pulse-dot"></div>
+            <span>Live Registration Open</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scroll hint -->
+    <div class="hero-scroll anim-ent" data-d="600">
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════ COUNTDOWN ═══════ -->
+  <section class="countdown-section" id="countdown">
+    <div class="container">
+      <div class="sec-header r-el">
+        <span class="badge badge-glass">Save The Date</span>
+        <h2 class="sec-title">Grand Reunion Event</h2>
+        <p class="sec-desc">Mark your calendars for the biggest alumni gathering of the decade.</p>
+      </div>
+
+      <div class="countdown-card r-el">
+        <div class="countdown-event-info">
+          <div class="event-date-badge">
+            <span class="edb-month">DEC</span>
+            <span class="edb-day">15</span>
+            <span class="edb-year">2026</span>
+          </div>
+          <div class="event-details">
+            <h3>Annual Grand Reunion</h3>
+            <p>St. Joseph's College Campus, Chennai</p>
+            <p class="event-time">10:00 AM — 8:00 PM IST</p>
+          </div>
+        </div>
+        <div class="countdown-timer" id="countdownTimer">
+          <div class="cd-unit">
+            <div class="cd-flip">
+              <span class="cd-num" id="cdDays">000</span>
+            </div>
+            <span class="cd-label">Days</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit">
+            <div class="cd-flip">
+              <span class="cd-num" id="cdHours">00</span>
+            </div>
+            <span class="cd-label">Hours</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit">
+            <div class="cd-flip">
+              <span class="cd-num" id="cdMins">00</span>
+            </div>
+            <span class="cd-label">Minutes</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit">
+            <div class="cd-flip">
+              <span class="cd-num" id="cdSecs">00</span>
+            </div>
+            <span class="cd-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ HIGHLIGHTS TIMELINE ═══════ -->
+  <section class="timeline-section" id="highlights">
+    <div class="container">
+      <div class="sec-header r-el">
+        <span class="badge badge-glass">Past Reunions</span>
+        <h2 class="sec-title">Moments That Defined Us</h2>
+        <p class="sec-desc">A look back at the milestones we've celebrated together over the years.</p>
+      </div>
+
+      <div class="hl-timeline" id="hlTimeline">
+        <div class="hl-line"><div class="hl-line-fill" id="hlLineFill"></div></div>
+
+        <!-- Year 2024 -->
+        <div class="hl-item hl-left" data-year="2024">
+          <div class="hl-dot"><span></span></div>
+          <div class="hl-card">
+            <span class="hl-year-badge">2024</span>
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Reunion 2024" class="hl-img" loading="eager" />
+            <h3>Silver Jubilee Celebration</h3>
+            <p>Over 800 alumni from the 1999 batch gathered for a landmark celebration featuring cultural performances and campus tours.</p>
+          </div>
+        </div>
+
+        <!-- Year 2022 -->
+        <div class="hl-item hl-right" data-year="2022">
+          <div class="hl-dot"><span></span></div>
+          <div class="hl-card">
+            <span class="hl-year-badge">2022</span>
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Reunion 2022" class="hl-img" loading="eager" />
+            <h3>Post-Pandemic Homecoming</h3>
+            <p>A heartfelt reunion after two years apart. 1200+ alumni reconnected with faculty and friends across 3 campuses.</p>
+          </div>
+        </div>
+
+        <!-- Year 2020 -->
+        <div class="hl-item hl-left" data-year="2020">
+          <div class="hl-dot"><span></span></div>
+          <div class="hl-card">
+            <span class="hl-year-badge">2020</span>
+            <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Virtual 2020" class="hl-img" loading="eager" />
+            <h3>Virtual Global Connect</h3>
+            <p>When the world went digital, so did we. 2000+ alumni joined from 15 countries for our first-ever virtual reunion.</p>
+          </div>
+        </div>
+
+        <!-- Year 2018 -->
+        <div class="hl-item hl-right" data-year="2018">
+          <div class="hl-dot"><span></span></div>
+          <div class="hl-card">
+            <span class="hl-year-badge">2018</span>
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Reunion 2018" class="hl-img" loading="eager" />
+            <h3>Golden Years Gala</h3>
+            <p>A black-tie evening celebrating 25 years of excellence with keynote speakers from Fortune 500 companies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ WHAT TO EXPECT ═══════ -->
+  <section class="expect-section" id="expect">
+    <div class="container">
+      <div class="sec-header r-el">
+        <span class="badge badge-glass">This Year</span>
+        <h2 class="sec-title">What To Expect</h2>
+        <p class="sec-desc">A day of nostalgia, networking, and unforgettable new memories.</p>
+      </div>
+
+      <div class="expect-grid">
+        <div class="expect-card r-el" data-icon="🎭">
+          <div class="ec-icon-wrap"><span class="ec-icon">🎭</span></div>
+          <div class="ec-glow"></div>
+          <h3>Cultural Evening</h3>
+          <p>Live performances, music, and dance by alumni and current students celebrating our vibrant culture.</p>
+        </div>
+        <div class="expect-card r-el" data-icon="🏆">
+          <div class="ec-icon-wrap"><span class="ec-icon">🏆</span></div>
+          <div class="ec-glow"></div>
+          <h3>Achievement Awards</h3>
+          <p>Recognize outstanding alumni who have excelled in industry, academia, and social impact.</p>
+        </div>
+        <div class="expect-card r-el" data-icon="🤝">
+          <div class="ec-icon-wrap"><span class="ec-icon">🤝</span></div>
+          <div class="ec-glow"></div>
+          <h3>Networking Lounge</h3>
+          <p>Exclusive spaces designed for meaningful conversations with batchmates and industry leaders.</p>
+        </div>
+        <div class="expect-card r-el" data-icon="📸">
+          <div class="ec-icon-wrap"><span class="ec-icon">📸</span></div>
+          <div class="ec-glow"></div>
+          <h3>Memory Wall</h3>
+          <p>Interactive digital wall showcasing photos, messages, and time capsules from your batch years.</p>
+        </div>
+        <div class="expect-card r-el" data-icon="🍽️">
+          <div class="ec-icon-wrap"><span class="ec-icon">🍽️</span></div>
+          <div class="ec-glow"></div>
+          <h3>Grand Dinner</h3>
+          <p>An exquisite sit-down dinner featuring curated cuisine and batch-specific table arrangements.</p>
+        </div>
+        <div class="expect-card r-el" data-icon="🎓">
+          <div class="ec-icon-wrap"><span class="ec-icon">🎓</span></div>
+          <div class="ec-glow"></div>
+          <h3>Campus Tour</h3>
+          <p>Walk through the evolved campus, visit your old classrooms, labs, and discover new facilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ TESTIMONIALS ═══════ -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="sec-header r-el">
+        <span class="badge" style="color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);">Alumni Voices</span>
+        <h2 class="sec-title" style="color:#fff;">What Our Alumni Say</h2>
+        <p class="sec-desc" style="color:rgba(255,255,255,.7);">Hear from alumni who've experienced the magic of reunions.</p>
+      </div>
+
+      <div class="testimonial-carousel" id="testimonialCarousel">
+        <div class="tc-track" id="tcTrack">
+          <div class="tc-slide">
+            <div class="tc-card">
+              <div class="tc-quote">"</div>
+              <p class="tc-text">Walking through those corridors after 20 years brought tears to my eyes. The reunion wasn't just an event — it was a time machine that took me back to the best years of my life.</p>
+              <div class="tc-author">
+                <div class="tc-avatar">RK</div>
+                <div>
+                  <h4>Rajesh Kumar</h4>
+                  <span>Batch of 2004 • CTO, TechVista</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tc-slide">
+            <div class="tc-card">
+              <div class="tc-quote">"</div>
+              <p class="tc-text">The networking alone was worth it. I reconnected with a classmate who became my co-founder. Our startup now employs 50 josephites. That's the power of reunion.</p>
+              <div class="tc-author">
+                <div class="tc-avatar">PS</div>
+                <div>
+                  <h4>Priya Sharma</h4>
+                  <span>Batch of 2008 • Founder, NeuralEdge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tc-slide">
+            <div class="tc-card">
+              <div class="tc-quote">"</div>
+              <p class="tc-text">Seeing my professors still passionate about teaching after all these years was incredibly inspiring. The reunion reminded me why I chose engineering in the first place.</p>
+              <div class="tc-author">
+                <div class="tc-avatar">AV</div>
+                <div>
+                  <h4>Arun Venkatesh</h4>
+                  <span>Batch of 2012 • VP Engineering, Infosys</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tc-nav">
+          <button class="tc-btn tc-prev" id="tcPrev" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="tc-dots" id="tcDots"></div>
+          <button class="tc-btn tc-next" id="tcNext" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ REGISTRATION FORM ═══════ -->
+  <section class="register-section" id="register">
+    <div class="container">
+      <div class="register-layout">
+        <div class="register-info r-el">
+          <span class="badge badge-glass">Join Us</span>
+          <h2>Reserve Your Spot</h2>
+          <p>Register now to secure your place at the most anticipated alumni gathering of the year. Early registrations receive exclusive perks and priority seating.</p>
+
+          <div class="reg-perks">
+            <div class="reg-perk">
+              <span class="rp-icon">✓</span>
+              <span>Priority campus tour access</span>
+            </div>
+            <div class="reg-perk">
+              <span class="rp-icon">✓</span>
+              <span>Exclusive reunion merchandise</span>
+            </div>
+            <div class="reg-perk">
+              <span class="rp-icon">✓</span>
+              <span>VIP networking lounge entry</span>
+            </div>
+            <div class="reg-perk">
+              <span class="rp-icon">✓</span>
+              <span>Digital memory book access</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="register-form-wrap r-el">
+          <form id="reunionForm" class="register-form">
+            <div class="rf-header">
+              <h3>Reunion Registration</h3>
+              <p>Fill in your details below</p>
+              <div class="rf-divider"></div>
+            </div>
+
+            <div class="rf-row">
+              <div class="rf-group">
+                <div class="rf-input-wrap">
+                  <input type="text" class="rf-input" id="rfName" placeholder=" " required />
+                  <label class="rf-label">Full Name</label>
+                  <div class="rf-focus-line"></div>
+                </div>
+              </div>
+              <div class="rf-group">
+                <div class="rf-input-wrap">
+                  <input type="email" class="rf-input" id="rfEmail" placeholder=" " required />
+                  <label class="rf-label">Email Address</label>
+                  <div class="rf-focus-line"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rf-row">
+              <div class="rf-group">
+                <div class="rf-input-wrap">
+                  <input type="tel" class="rf-input" id="rfPhone" placeholder=" " />
+                  <label class="rf-label">Phone Number</label>
+                  <div class="rf-focus-line"></div>
+                </div>
+              </div>
+              <div class="rf-group">
+                <div class="rf-input-wrap rf-select-wrap">
+                  <select class="rf-input rf-select" id="rfBatch" required>
+                    <option value="" disabled selected>Select your batch</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <label class="rf-label">Graduation Batch</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="rf-row">
+              <div class="rf-group">
+                <div class="rf-input-wrap">
+                  <input type="text" class="rf-input" id="rfDept" placeholder=" " />
+                  <label class="rf-label">Department</label>
+                  <div class="rf-focus-line"></div>
+                </div>
+              </div>
+              <div class="rf-group">
+                <div class="rf-input-wrap">
+                  <input type="number" class="rf-input" id="rfGuests" placeholder=" " min="0" max="5" value="0" />
+                  <label class="rf-label">Guests Accompanying</label>
+                  <div class="rf-focus-line"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rf-group">
+              <div class="rf-input-wrap">
+                <textarea class="rf-input rf-textarea" id="rfMessage" placeholder=" " rows="3"></textarea>
+                <label class="rf-label">Message / Special Requests <span class="rf-opt">(optional)</span></label>
+                <div class="rf-focus-line"></div>
+              </div>
+            </div>
+
+            <button type="submit" class="rf-submit btn-ripple" id="rfSubmitBtn">
+              <span id="rfSubmitText">Register for Reunion</span>
+              <span class="rf-submit-icon">→</span>
+              <div class="rf-submit-glow"></div>
+            </button>
+
+            <div class="form-ok" id="formOk">
+              <div class="ok-check">✓</div>
+              <h3>You're Registered!</h3>
+              <p>We'll send you event details and your unique pass closer to the date.</p>
+            </div>
+
+            <div class="form-error" id="formError"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ CTA ═══════ -->
+  <section class="cta-section r-el">
+    <div class="container cta-body">
+      <h2 class="cta-heading">Don't Miss This Reunion</h2>
+      <p class="cta-sub">The memories are waiting. Your batchmates are waiting. Come home to St. Joseph's.</p>
+      <a href="#register" class="btn btn-white btn-lg btn-ripple">Register Today</a>
+    </div>
+  </section>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <div class="foot-logo-row">
+            <span>St. Joseph's College of Engineering</span>
+          </div>
+          <p>Bringing alumni together to celebrate, connect, and inspire the next generation of engineers.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Quick Links</h4>
+          <a href="alumni/alumni/index.html">Alumni Home</a>
+          <a href="Internship/Internship/internship.html">Internships</a>
+          <a href="1.html">Mentorship</a>
+          <a href="connect/alumini/events.html">Events</a>
+        </div>
+        <div class="foot-col">
+          <h4>Reunion</h4>
+          <a href="#countdown">Event Details</a>
+          <a href="#highlights">Past Reunions</a>
+          <a href="#register">Register</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a href="#">alumni@stjosephs.edu</a>
+          <a href="#">+91 44 2450 1060</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>&copy; 2026 St. Joseph's College of Engineering. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Supabase Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="batch-reunion.js"></script>
+</body>
+
+</html>
