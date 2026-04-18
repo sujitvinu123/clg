@@ -42,22 +42,23 @@ This platform helps:
 ## 📸 Screenshots
 
 ### 🏠 Landing Page
-<img src="assets/images/hero-section.png" width="100%"/>
+<img src="clg-main/clg-main/assets/images/hero-section.png" width="100%"/>
 
 ---
 
 ### 🔍 Alumni Search & Filters
-<img src="assets/images/alumni-search.png" width="100%"/>
+<img src="clg-main/clg-main/assets/images/alumni-search.png" width="100%"/>
 
 ---
 
 ### 📝 Mentorship Application Form
-<img src="assets/images/mentorship-form.png" width="100%"/>
+<img src="clg-main/clg-main/assets/images/mentorship-form.png" width="100%"/>
 
 ---
 
 ### 💼 Internship & Opportunities Section
-<img src="assets/images/internship-section.png" width="100%"/>
+<img src="clg-main/clg-main/assets/images/internship-section.png" width="100%"/>
+
 ---
 
 ## ⚙️ Installation & Setup
